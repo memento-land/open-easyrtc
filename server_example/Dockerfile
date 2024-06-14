@@ -24,7 +24,7 @@ RUN npm install --production
 
 ADD . $APPDIR
 
-VOLUME "static"
+# VOLUME ['certs', 'static']
 
 # Replace 'easyrtc = require("..");' by 'easyrtc = require("open-easyrtc");''
 # To use easyrtc from node_modules instead of parent directory
