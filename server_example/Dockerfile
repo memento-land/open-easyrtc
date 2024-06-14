@@ -3,7 +3,7 @@ FROM node:14-alpine
 MAINTAINER Harold Thetiot <hthetiot@gmail.com>
 
 # Upgrade npm
-RUN npm i npm@latest -g
+# RUN npm i npm@latest -g
 ENV NO_UPDATE_NOTIFIER 1
 
 # Create app directory
