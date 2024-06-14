@@ -20,7 +20,7 @@ RUN npm install
 # Install dependencies in production mode (no dev dependencies).
 ARG EASYRTC_BRANCH=master
 RUN npm install open-easyrtc@latest --verbose
-RUN npm install --production
+RUN npm install --production --verbose
 
 ADD . $APPDIR
 
@@ -31,8 +31,8 @@ ADD . $APPDIR
 RUN sed -i "s|easyrtc = require(\"../\")|easyrtc = require(\"open-easyrtc\")|g" $APPDIR/*.js
 
 # Define service user
-RUN chown -R nobody:nogroup $APPDIR && chmod -R a-w $APPDIR && ls -ld
-USER nobody
+# RUN chown -R nobody:nogroup $APPDIR && chmod -R a-w $APPDIR && ls -ld
+# USER nobody
 
 # Ports > 1024 since we're not root.
 EXPOSE 8080 8443
