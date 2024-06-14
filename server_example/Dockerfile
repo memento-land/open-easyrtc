@@ -1,9 +1,9 @@
 # Pull base image.
-FROM node:14-alpine
+FROM node:18-alpine
 # MAINTAINER Harold Thetiot <hthetiot@gmail.com>
 
 # Upgrade npm
-# RUN npm i npm@latest -g
+RUN npm i npm@latest -g
 ENV NO_UPDATE_NOTIFIER 1
 
 # Create app directory
@@ -19,7 +19,7 @@ RUN npm install
 
 # Install dependencies in production mode (no dev dependencies).
 ARG EASYRTC_BRANCH=master
-RUN npm install open-easyrtc --verbose
+RUN npm install open-easyrtc@latest --verbose
 RUN npm install --production
 
 ADD . $APPDIR
