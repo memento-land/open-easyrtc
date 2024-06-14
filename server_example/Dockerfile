@@ -19,7 +19,7 @@ RUN npm install
 
 # Install dependencies in production mode (no dev dependencies).
 ARG EASYRTC_BRANCH=master
-RUN npm install open-easyrtc@latest --verbose
+RUN npm install open-easyrtc --verbose
 RUN npm install --production
 
 ADD . $APPDIR
