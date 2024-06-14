@@ -40,7 +40,8 @@
     "test": "grunt test",
     "test-headless": "grunt test-headless",
     "doc": "grunt jsdoc:client jsdoc:server",
-    "serve": "grunt serve"
+    "serve": "grunt serve",
+    "start": "cd server_example && npm install && node server.js"
   },
   "analyze": false,
   "license": "BSD-2-Clause",

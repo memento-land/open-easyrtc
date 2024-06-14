@@ -183,3 +183,4 @@ desktopCapture
 test/reports/
 bower_components/
 /docs/html*
+.vercel
