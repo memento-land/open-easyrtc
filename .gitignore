@@ -179,7 +179,7 @@ config_override.js
 nbproject
 .idea
 desktopCapture
-/api/labs/desktopCapture
+/api-endpoints/labs/desktopCapture
 test/reports/
 bower_components/
 /docs/html*
